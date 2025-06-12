@@ -6,7 +6,7 @@ on:
 jobs:
     deploy-prueba-githubActions:
         runs-on: ubuntu-latest        
-        steps:
+        step:
             run: echo "hacemos un pull del codigo"
             run: echo "Correr migraciones"
             run: echo "Generar binario"
