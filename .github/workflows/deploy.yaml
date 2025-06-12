@@ -1,0 +1,13 @@
+name: "Deploy prueba"
+
+on: 
+    push:
+        branches: ["main"]
+jobs:
+    deploy-prueba-githubActions:
+        runs-on: ubuntu-latest        
+        steps:
+            run: echo "hacemos un pull del codigo"
+            run: echo "Correr migraciones"
+            run: echo "Generar binario"
+            run: echo "Publicar version"
