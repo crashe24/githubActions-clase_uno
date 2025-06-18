@@ -8,10 +8,11 @@ jobs:
     steps:
       - name: working dir
         run: ls -al
-      - name: Action
+
       - uses: actions/checkout@v4
-      - name: Hola mundo
-        run: echo "Hola mundo $NAME"
+
+      - name: working dir after action
+        run: ls -al
   second_jobs:
     if: ${{ github.ref == 'refs/heads/main'}}
     needs:
