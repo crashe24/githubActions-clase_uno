@@ -8,6 +8,7 @@ jobs:
       - name: Hola mundo
         run: echo "Hola mundo"
   second_jobs:
+    if: ${{ github.ref == 'refs/heads/main'}}
     needs:
       - first_jobs
     runs-on: ubuntu-latest
