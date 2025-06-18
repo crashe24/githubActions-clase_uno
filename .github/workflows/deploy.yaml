@@ -8,6 +8,8 @@ jobs:
       - name: Hola mundo
         run: echo "Hola mundo"
   second_jobs:
+    needs:
+      - first_jobs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
