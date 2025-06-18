@@ -1,15 +1,8 @@
-name: "Deploy prueba"
-
-on:
-  push:
-    branches: ["main"]
-
+name: Deploy to server
+on: push
 jobs:
-  deploy-prueba-githubActions:
-    runs-on: ubuntu-latest
+  first_jobs:
+    runs-om: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4 # Esta es una acción, debe tener un guion
-      - run: echo "hacemos un pull del codigo" # Este es un comando, debe tener un guion
-      - run: echo "Correr migraciones"
-      - run: echo "Generar binario"
-      - run: echo "Publicar version"
+      - name: Hola mundo
+        runc: echo "Hola mundo"
