@@ -7,7 +7,7 @@ jobs:
       NAME: pruebaVariable
     steps:
       - uses: actions/checkout@v4
-      - name: Hola mundo
+      - name: Hola mundo $NAME
         run: echo "Hola mundo"
   second_jobs:
     if: ${{ github.ref == 'refs/heads/main'}}
