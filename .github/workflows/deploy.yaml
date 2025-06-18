@@ -3,6 +3,9 @@ on: push
 jobs:
   first_jobs:
     runs-on: ubuntu-latest
+
+    outputs:
+      salida: ${{ steps.step_1.outputs.mi_variable}}
     env:
       NAME: pruebaVariable
     steps:
@@ -24,8 +27,11 @@ jobs:
     needs:
       - first_jobs
     runs-on: ubuntu-latest
+
+    env:
+      SALIDA: ${{ needs.first_jobs.outputs.salida}}
     steps:
       - uses: actions/checkout@v4
       - name: Hola mundo segundo
         if: false
-        run: echo "nuevo saludo"
+        run: echo "nuevo saludo $SALIDA"
