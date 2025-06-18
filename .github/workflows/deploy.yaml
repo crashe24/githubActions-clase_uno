@@ -7,9 +7,11 @@ jobs:
       NAME: pruebaVariable
     steps:
       - name: working dir
-        run: ls -al
+        run: echo $GITHUB_OUTPUT
 
       - uses: actions/checkout@v4
+        with:
+          hola: 12
 
       - name: working dir after action
         run: ls -al
