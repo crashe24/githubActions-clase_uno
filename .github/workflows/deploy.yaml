@@ -3,6 +3,8 @@ on: push
 jobs:
   first_jobs:
     runs-on: ubuntu-latest
+    env:
+      NAME: pruebaVariable
     steps:
       - uses: actions/checkout@v4
       - name: Hola mundo
