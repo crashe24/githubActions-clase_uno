@@ -4,5 +4,6 @@ jobs:
   first_jobs:
     runs-om: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Hola mundo
         runc: echo "Hola mundo"
