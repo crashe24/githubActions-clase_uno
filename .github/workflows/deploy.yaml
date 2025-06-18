@@ -7,3 +7,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Hola mundo
         run: echo "Hola mundo"
+  second_jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Hola mundo segundo
+        run: echo "nuevo saludo"
