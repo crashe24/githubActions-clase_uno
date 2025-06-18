@@ -7,7 +7,7 @@ jobs:
       NAME: pruebaVariable
     steps:
       - name: working dir
-        run: echo $GITHUB_OUTPUT
+        run: echo "mi_variable=variable entorno" >>  $GITHUB_OUTPUT
 
       - uses: actions/checkout@v4
         with:
