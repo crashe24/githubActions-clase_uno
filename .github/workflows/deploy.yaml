@@ -6,6 +6,9 @@ jobs:
     env:
       NAME: pruebaVariable
     steps:
+      - name: working dir
+        run: ls -al
+      - name: Action
       - uses: actions/checkout@v4
       - name: Hola mundo
         run: echo "Hola mundo $NAME"
